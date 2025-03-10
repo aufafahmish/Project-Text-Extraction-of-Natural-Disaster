@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Disaster Map - TanggapID</title>
+  <!-- Anda bisa menambahkan CSS tambahan jika diperlukan -->
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+</head>
+<body class="container my-5">
+  <h1 class="mb-4">Disaster Map</h1>
+  <div class="embed-responsive" style="height:600px;">
+    <iframe src="{{ map_path }}" width="100%" height="100%" frameborder="0"></iframe>
+  </div>
+  <!-- Tombol kembali atau menu navigasi bisa ditambahkan di sini -->
+</body>
+</html>

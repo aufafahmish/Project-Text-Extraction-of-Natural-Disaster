@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>TanggapID</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='img/favicon-32x32.png') }}" rel="icon">
+  <link href="{{ url_for('static', filename='img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="services-page">
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="{{ url_for('home') }}" class="logo d-flex align-items-center">
+        <h1 class="sitename">TanggapID</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('team') }}">Team</a></li>
+          <li><a href="{{ url_for('updates') }}">Update</a></li>
+          <li><a href="{{ url_for('visual') }}" class="active">Distribution</a></li>
+          <li><a href="{{ url_for('map_view') }}">Disaster Map</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/services-page-title-bg.jpg);">
+      <div class="container">
+        <h1>Visual</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li class="current">Visual</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- End Page Title -->
+
+    <div class="container my-5">
+      <!-- Filter Form (Checkboxes) -->
+      <form method="GET" action="{{ url_for('visual') }}">
+        <div class="row g-3 align-items-end mb-3">
+          <!-- Filter Jenis Bencana -->
+          <div class="col-auto">
+            <label class="form-label d-block"><b>Disaster Type</b></label>
+            <!-- Anda dapat membungkus checkbox di dalam card atau div lain agar lebih rapi -->
+            <div class="form-check form-check-inline mb-2">
+              <input class="form-check-input" type="checkbox" name="disaster_type" id="banjir" value="Banjir"
+                     {% if 'Banjir' in request.args.getlist('disaster_type') %}checked{% endif %}>
+              <label class="form-check-label" for="banjir">Banjir</label>
+            </div>
+            <div class="form-check form-check-inline mb-2">
+              <input class="form-check-input" type="checkbox" name="disaster_type" id="hidro" value="Bencana Hidrometerologi Ekstrem"
+                     {% if 'Bencana Hidrometerologi Ekstrem' in request.args.getlist('disaster_type') %}checked{% endif %}>
+              <label class="form-check-label" for="hidro">Bencana Hidrometerologi Ekstrem</label>
+            </div>
+            <div class="form-check form-check-inline mb-2">
+              <input class="form-check-input" type="checkbox" name="disaster_type" id="gempa" value="Gempa Bumi"
+                     {% if 'Gempa Bumi' in request.args.getlist('disaster_type') %}checked{% endif %}>
+              <label class="form-check-label" for="gempa">Gempa Bumi</label>
+            </div>
+            <div class="form-check form-check-inline mb-2">
+              <input class="form-check-input" type="checkbox" name="disaster_type" id="gunung" value="Gunung Meletus"
+                     {% if 'Gunung Meletus' in request.args.getlist('disaster_type') %}checked{% endif %}>
+              <label class="form-check-label" for="gunung">Gunung Meletus</label>
+            </div>
+            <div class="form-check form-check-inline mb-2">
+              <input class="form-check-input" type="checkbox" name="disaster_type" id="puting" value="Puting Beliung"
+                     {% if 'Puting Beliung' in request.args.getlist('disaster_type') %}checked{% endif %}>
+              <label class="form-check-label" for="puting">Puting Beliung</label>
+            </div>
+            <div class="form-check form-check-inline mb-2">
+              <input class="form-check-input" type="checkbox" name="disaster_type" id="longsor" value="Tanah Longsor"
+                     {% if 'Tanah Longsor' in request.args.getlist('disaster_type') %}checked{% endif %}>
+              <label class="form-check-label" for="longsor">Tanah Longsor</label>
+            </div>
+            <div class="form-check form-check-inline mb-2">
+              <input class="form-check-input" type="checkbox" name="disaster_type" id="tsunami" value="Tsunami"
+                     {% if 'Tsunami' in request.args.getlist('disaster_type') %}checked{% endif %}>
+              <label class="form-check-label" for="tsunami">Tsunami</label>
+            </div>
+          </div>
+
+          <!-- Tanggal Mulai -->
+          <div class="col-auto">
+            <label for="start_date" class="form-label"><b>Start Date</b></label>
+            <input type="date" id="start_date" name="start_date" class="form-control"
+                   value="{{ request.args.get('start_date', '') }}">
+          </div>
+
+          <!-- Tanggal Akhir -->
+          <div class="col-auto">
+            <label for="end_date" class="form-label"><b>End Date</b></label>
+            <input type="date" id="end_date" name="end_date" class="form-control"
+                   value="{{ request.args.get('end_date', '') }}">
+          </div>
+
+          <!-- Tombol Filter -->
+          <div class="col-auto">
+            <button type="submit" class="btn btn-success">Filter</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Canvas Chart -->
+      <div class="mb-4">
+        <canvas id="myChart" width="400" height="200"></canvas>
+      </div>
+
+      {% if data_visual %}
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Jenis Bencana</th>
+            <th>Jumlah Artikel</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in data_visual %}
+          <tr>
+            <td>{{ row['Type'] }}</td>
+            <td>{{ row['count'] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% endif %}
+    </div>
+  </main>
+  <!-- End Main -->
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/php-email-form/validate.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+
+  <!-- Main JS File -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+  <!-- Script inisialisasi Chart.js dengan warna berbeda -->
+  <script>
+    // Data array dari backend
+    const labels = JSON.parse('{{ chart_labels|tojson|safe }}');
+    const values = JSON.parse('{{ chart_values|tojson|safe }}');
+    const colors = JSON.parse('{{ chart_colors|tojson|safe }}');
+    const borderColors = JSON.parse('{{ chart_border_colors|tojson|safe }}');
+
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Number of News Report',
+          data: values,
+          backgroundColor: colors,
+          borderColor: borderColors,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        scales: {
+          x: {
+            beginAtZero: true
+          },
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

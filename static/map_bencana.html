@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_46b79ce7c2e0bf8a0d2f7ebf97e8b7f4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_46b79ce7c2e0bf8a0d2f7ebf97e8b7f4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_46b79ce7c2e0bf8a0d2f7ebf97e8b7f4 = L.map(
+                "map_46b79ce7c2e0bf8a0d2f7ebf97e8b7f4",
+                {
+                    center: [-2.5489, 118.0149],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2bdb730a8cb4a6369e19776b73efc42c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2bdb730a8cb4a6369e19776b73efc42c.addTo(map_46b79ce7c2e0bf8a0d2f7ebf97e8b7f4);
+        
+    
+            var marker_cluster_7fabcfb87b94abdb028ba4b22ac0544a = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_4f93914ef3b481ac3cb05c6a187666f1 = L.marker(
+                [-7.33351875, 108.41277944462026],
+                {
+}
+            ).addTo(marker_cluster_7fabcfb87b94abdb028ba4b22ac0544a);
+        
+    
+            var icon_d073f1aefac10fbd78898f1d8fb82b89 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_4f93914ef3b481ac3cb05c6a187666f1.setIcon(icon_d073f1aefac10fbd78898f1d8fb82b89);
+        
+    
+        var popup_cd7f0e9801dd921d8fdf256dcb066f1d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9b69cdf138b030670fee0d015277454f = $(`<div id="html_9b69cdf138b030670fee0d015277454f" style="width: 100.0%; height: 100.0%;">             <b>Type:</b> Banjir<br>             <b>Location:</b> Kecamatan Cijeungjing, Kabupaten Ciamis<br>             <b>Date:</b> 22 February 2025<br>             <b>Time:</b> Tidak ada dalam artikel<br>             <b>Impact:</b> Sebanyak 7 bangunan terdiri dari rumah warga dan asrama putri pondok pesantren rusak tertimpa pohon tumbang.             <br><a href='https://www.detik.com/jabar/berita/d-7791405/kedai-kopi-dan-6-bangunan-tertimpa-pohon-tumbang-di-ciamis' target='_blank'>Baca Selengkapnya</a>             </div>`)[0];
+                popup_cd7f0e9801dd921d8fdf256dcb066f1d.setContent(html_9b69cdf138b030670fee0d015277454f);
+            
+        
+
+        marker_4f93914ef3b481ac3cb05c6a187666f1.bindPopup(popup_cd7f0e9801dd921d8fdf256dcb066f1d)
+        ;
+
+        
+    
+    
+            var marker_3a730462865e54e4dd81044fa73daa6a = L.marker(
+                [36.5748441, 139.2394179],
+                {
+}
+            ).addTo(marker_cluster_7fabcfb87b94abdb028ba4b22ac0544a);
+        
+    
+            var icon_8e2f951d3f73b29e0266b17ff207f5bf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_3a730462865e54e4dd81044fa73daa6a.setIcon(icon_8e2f951d3f73b29e0266b17ff207f5bf);
+        
+    
+        var popup_4b2c3d1275b7db25cf4736df52385bcc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4861e72465f6363a02fddbd8101edb95 = $(`<div id="html_4861e72465f6363a02fddbd8101edb95" style="width: 100.0%; height: 100.0%;">             <b>Type:</b> Gempa Bumi<br>             <b>Location:</b> Jepang<br>             <b>Date:</b> nan<br>             <b>Time:</b> Tidak ada dalam artikel<br>             <b>Impact:</b> nan.             <br><a href='https://www.detik.com/edu/detikpedia/d-7786373/disebut-ikan-kiamat-benarkah-kemunculan-oarfish-jadi-tanda-buruk' target='_blank'>Baca Selengkapnya</a>             </div>`)[0];
+                popup_4b2c3d1275b7db25cf4736df52385bcc.setContent(html_4861e72465f6363a02fddbd8101edb95);
+            
+        
+
+        marker_3a730462865e54e4dd81044fa73daa6a.bindPopup(popup_4b2c3d1275b7db25cf4736df52385bcc)
+        ;
+
+        
+    
+    
+            var marker_9c696a0766995427e468cd78dd59fd3d = L.marker(
+                [-7.3520814, 112.7690848],
+                {
+}
+            ).addTo(marker_cluster_7fabcfb87b94abdb028ba4b22ac0544a);
+        
+    
+            var icon_072e83d1357face766e8fa20a1446bc9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_9c696a0766995427e468cd78dd59fd3d.setIcon(icon_072e83d1357face766e8fa20a1446bc9);
+        
+    
+        var popup_3d0ef86046f07bd9e8884048855e15c3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_39c70f53bbac2516f42bca15bc7412ff = $(`<div id="html_39c70f53bbac2516f42bca15bc7412ff" style="width: 100.0%; height: 100.0%;">             <b>Type:</b> Puting Beliung<br>             <b>Location:</b> Kabupaten Sidoarjo<br>             <b>Date:</b> 17 February 2025<br>             <b>Time:</b> 14.30 WIB<br>             <b>Impact:</b> Akibatnya, puluhan rumah warga mengalami kerusakan dan tiga orang dilaporkan terluka.             <br><a href='https://www.detik.com/jatim/berita/d-7782941/angin-kencang-terjang-sidoarjo-20-rumah-rusak-dan-3-warga-terluka' target='_blank'>Baca Selengkapnya</a>             </div>`)[0];
+                popup_3d0ef86046f07bd9e8884048855e15c3.setContent(html_39c70f53bbac2516f42bca15bc7412ff);
+            
+        
+
+        marker_9c696a0766995427e468cd78dd59fd3d.bindPopup(popup_3d0ef86046f07bd9e8884048855e15c3)
+        ;
+
+        
+    
+    
+            var marker_dca95692f9ee2122497fdd628fec8074 = L.marker(
+                [-0.9210461, 122.6975066],
+                {
+}
+            ).addTo(marker_cluster_7fabcfb87b94abdb028ba4b22ac0544a);
+        
+    
+            var icon_0bb9cddfccb0ff2cb4bc320ce33ca14f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_dca95692f9ee2122497fdd628fec8074.setIcon(icon_0bb9cddfccb0ff2cb4bc320ce33ca14f);
+        
+    
+        var popup_96b7dff318e1df9cfa4a7dbb68abeb0c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7735ee907820acf1bdc6266c990fd607 = $(`<div id="html_7735ee907820acf1bdc6266c990fd607" style="width: 100.0%; height: 100.0%;">             <b>Type:</b> Puting Beliung<br>             <b>Location:</b> Kabupaten Banggai, Sulawesi Tengah, Sulteng<br>             <b>Date:</b> 16 February 2025<br>             <b>Time:</b> Tidak ada dalam artikel<br>             <b>Impact:</b> Asrama Polsek Balantak di Kabupaten Banggai, Sulawesi Tengah (Sulteng) rusak berat akibat diterjang angin puting beliung.             <br><a href='https://www.detik.com/sulsel/berita/d-7780631/asrama-polsek-2-rumah-warga-di-banggai-rusak-diterjang-angin-puting-beliung' target='_blank'>Baca Selengkapnya</a>             </div>`)[0];
+                popup_96b7dff318e1df9cfa4a7dbb68abeb0c.setContent(html_7735ee907820acf1bdc6266c990fd607);
+            
+        
+
+        marker_dca95692f9ee2122497fdd628fec8074.bindPopup(popup_96b7dff318e1df9cfa4a7dbb68abeb0c)
+        ;
+
+        
+    
+    
+            var marker_e02dfb32c7268590e1117c542b7ee1e2 = L.marker(
+                [-8.318462, 123.16579632309583],
+                {
+}
+            ).addTo(marker_cluster_7fabcfb87b94abdb028ba4b22ac0544a);
+        
+    
+            var icon_d0e2d5f47e7ee142328c685b483b9abd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_e02dfb32c7268590e1117c542b7ee1e2.setIcon(icon_d0e2d5f47e7ee142328c685b483b9abd);
+        
+    
+        var popup_f6bb207ab853b5a7bf7f8b44081f829e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_16c4bae98315df2d15c776b0d11d7b62 = $(`<div id="html_16c4bae98315df2d15c776b0d11d7b62" style="width: 100.0%; height: 100.0%;">             <b>Type:</b> Gunung Meletus<br>             <b>Location:</b> Flores Timur, Nusa Tenggara Timur, Ntt<br>             <b>Date:</b> 21 December 2024<br>             <b>Time:</b> Tidak ada dalam artikel<br>             <b>Impact:</b> nan.             <br><a href='http://regional.kompas.com/read/2025/02/20/171601378/peran-pemkab-flores-timur-dalam-penanganan-donasi-bencana-lewotobi' target='_blank'>Baca Selengkapnya</a>             </div>`)[0];
+                popup_f6bb207ab853b5a7bf7f8b44081f829e.setContent(html_16c4bae98315df2d15c776b0d11d7b62);
+            
+        
+
+        marker_e02dfb32c7268590e1117c542b7ee1e2.bindPopup(popup_f6bb207ab853b5a7bf7f8b44081f829e)
+        ;
+
+        
+    
+    
+            var marker_c3200afee846d3b677b1b9858771ebc9 = L.marker(
+                [-8.07532165, 113.23625091586266],
+                {
+}
+            ).addTo(marker_cluster_7fabcfb87b94abdb028ba4b22ac0544a);
+        
+    
+            var icon_05edf586b8646f2764f003846fc81010 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_c3200afee846d3b677b1b9858771ebc9.setIcon(icon_05edf586b8646f2764f003846fc81010);
+        
+    
+        var popup_1647a9258c7dfeb5cbd8816837581434 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6200050794d54d98dcca050f96955746 = $(`<div id="html_6200050794d54d98dcca050f96955746" style="width: 100.0%; height: 100.0%;">             <b>Type:</b> Gunung Meletus<br>             <b>Location:</b> Kabupaten Lumajang, Jawa Timur<br>             <b>Date:</b> 20 February 2025<br>             <b>Time:</b> 00.00 WIB<br>             <b>Impact:</b> Sebanyak empat kali erupsi terpantau jelas secara visual, sedangkan satu erupsi lainnya tidak dapat teramati karena gunung tertutup kabut.             <br><a href='http://surabaya.kompas.com/read/2025/02/20/110140378/gunung-semeru-erupsi-5-kali-letusan-asap-capai-ketinggian-1000-meter' target='_blank'>Baca Selengkapnya</a>             </div>`)[0];
+                popup_1647a9258c7dfeb5cbd8816837581434.setContent(html_6200050794d54d98dcca050f96955746);
+            
+        
+
+        marker_c3200afee846d3b677b1b9858771ebc9.bindPopup(popup_1647a9258c7dfeb5cbd8816837581434)
+        ;
+
+        
+    
+    
+            var marker_f8793d54ae573e6e28d7b00b7b49ddca = L.marker(
+                [-8.4246753, 121.0258936],
+                {
+}
+            ).addTo(marker_cluster_7fabcfb87b94abdb028ba4b22ac0544a);
+        
+    
+            var icon_675360a605dae6be87b78ebe82fac23a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_f8793d54ae573e6e28d7b00b7b49ddca.setIcon(icon_675360a605dae6be87b78ebe82fac23a);
+        
+    
+        var popup_4196ac0e68522f177201e62850634cca = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_51640d942ed685b40150a3e674756995 = $(`<div id="html_51640d942ed685b40150a3e674756995" style="width: 100.0%; height: 100.0%;">             <b>Type:</b> Gunung Meletus<br>             <b>Location:</b> Timur, Nusa Tenggara Timur, Ntt<br>             <b>Date:</b> 12 February 2025<br>             <b>Time:</b> 03.00 WITA<br>             <b>Impact:</b> Penjabat Bupati Flores Timur, Nusa Tenggara Timur (NTT), Sulastri H.             <br><a href='http://regional.kompas.com/read/2025/02/18/201405778/tunggu-2-bulan-warga-4-desa-terdampak-erupsi-lewotobi-tempati-huntara' target='_blank'>Baca Selengkapnya</a>             </div>`)[0];
+                popup_4196ac0e68522f177201e62850634cca.setContent(html_51640d942ed685b40150a3e674756995);
+            
+        
+
+        marker_f8793d54ae573e6e28d7b00b7b49ddca.bindPopup(popup_4196ac0e68522f177201e62850634cca)
+        ;
+
+        
+    
+    
+            var marker_b0548196d282fb4fb18f094c705cd3d5 = L.marker(
+                [-8.4246753, 121.0258936],
+                {
+}
+            ).addTo(marker_cluster_7fabcfb87b94abdb028ba4b22ac0544a);
+        
+    
+            var icon_3d93adc7dc32a5c655eafca11c536630 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_b0548196d282fb4fb18f094c705cd3d5.setIcon(icon_3d93adc7dc32a5c655eafca11c536630);
+        
+    
+        var popup_ec94a397c78d9fe15c3b6f2bff5735ed = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_92bc624bd84ba4f76315bb35911c9864 = $(`<div id="html_92bc624bd84ba4f76315bb35911c9864" style="width: 100.0%; height: 100.0%;">             <b>Type:</b> Banjir<br>             <b>Location:</b> Nusa Tenggara Timur, Ntt<br>             <b>Date:</b> 14 February 2025<br>             <b>Time:</b> Tidak ada dalam artikel<br>             <b>Impact:</b> Kejaksaan Negeri Lembata , Nusa Tenggara Timur (NTT), sedang mendalami kasus dugaan korupsi  dana bantuan sosial (bansos) untuk korban bencana banjir bandang pada Dinas Sosial tahun anggaran 2021.             <br><a href='http://regional.kompas.com/read/2025/02/14/170048378/korupsi-bansos-korban-banjir-bandang-di-lembata-100-saksi-diperiksa' target='_blank'>Baca Selengkapnya</a>             </div>`)[0];
+                popup_ec94a397c78d9fe15c3b6f2bff5735ed.setContent(html_92bc624bd84ba4f76315bb35911c9864);
+            
+        
+
+        marker_b0548196d282fb4fb18f094c705cd3d5.bindPopup(popup_ec94a397c78d9fe15c3b6f2bff5735ed)
+        ;
+
+        
+    
+    
+            var marker_3ebb493e2a8af07b4ac6e37d5206be04 = L.marker(
+                [-5.421343, 105.265792],
+                {
+}
+            ).addTo(marker_cluster_7fabcfb87b94abdb028ba4b22ac0544a);
+        
+    
+            var icon_33040dfbdbdb68a63a05a0ef69fd4469 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_3ebb493e2a8af07b4ac6e37d5206be04.setIcon(icon_33040dfbdbdb68a63a05a0ef69fd4469);
+        
+    
+        var popup_6a2c0bcf3c971fbdd20921dea4f31617 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_75ad0a50eab55dbd35d1149706693e91 = $(`<div id="html_75ad0a50eab55dbd35d1149706693e91" style="width: 100.0%; height: 100.0%;">             <b>Type:</b> Banjir<br>             <b>Location:</b> Kota Bandar Lampung<br>             <b>Date:</b> 23 February<br>             <b>Time:</b> 00.51 WIB<br>             <b>Impact:</b> Kementerian Sosial (Kemensos) mengirimkan bantuan senilai Rp568 juta untuk warga terdampak bencana banjir di Kota Bandar Lampung dan sekitarnya.             <br><a href='https://www.cnnindonesia.com/nasional/20250223130116-25-1201469/kemensos-salurkan-bantuan-untuk-korban-banjir-di-bandar-lampung' target='_blank'>Baca Selengkapnya</a>             </div>`)[0];
+                popup_6a2c0bcf3c971fbdd20921dea4f31617.setContent(html_75ad0a50eab55dbd35d1149706693e91);
+            
+        
+
+        marker_3ebb493e2a8af07b4ac6e37d5206be04.bindPopup(popup_6a2c0bcf3c971fbdd20921dea4f31617)
+        ;
+
+        
+    
+    
+            var marker_9bfbcb0d30607abc6cd04470e9c6fcc8 = L.marker(
+                [-6.136197, 106.90069022428446],
+                {
+}
+            ).addTo(marker_cluster_7fabcfb87b94abdb028ba4b22ac0544a);
+        
+    
+            var icon_9e6702c44a16a5da2f2d1d302bf24c1e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_9bfbcb0d30607abc6cd04470e9c6fcc8.setIcon(icon_9e6702c44a16a5da2f2d1d302bf24c1e);
+        
+    
+        var popup_96c700521d15dea7d2ecec24c7db70e7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c6a88cb88b2f02b244592075c45c362a = $(`<div id="html_c6a88cb88b2f02b244592075c45c362a" style="width: 100.0%; height: 100.0%;">             <b>Type:</b> Banjir<br>             <b>Location:</b> Jakarta Utara<br>             <b>Date:</b> 23 February<br>             <b>Time:</b> Tidak ada dalam artikel<br>             <b>Impact:</b> nan.             <br><a href='https://www.cnnindonesia.com/nasional/20250223124311-20-1201464/rano-mau-alat-pengendalian-banjir-jakarta-pakai-gps-dipantau-online' target='_blank'>Baca Selengkapnya</a>             </div>`)[0];
+                popup_96c700521d15dea7d2ecec24c7db70e7.setContent(html_c6a88cb88b2f02b244592075c45c362a);
+            
+        
+
+        marker_9bfbcb0d30607abc6cd04470e9c6fcc8.bindPopup(popup_96c700521d15dea7d2ecec24c7db70e7)
+        ;
+
+        
+    
+    
+            var marker_94c7cecdfcd3542d7be1c7a920c6c38f = L.marker(
+                [-6.136197, 106.90069022428446],
+                {
+}
+            ).addTo(marker_cluster_7fabcfb87b94abdb028ba4b22ac0544a);
+        
+    
+            var icon_4b4d275bf58de32baa0d7909c9700986 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_94c7cecdfcd3542d7be1c7a920c6c38f.setIcon(icon_4b4d275bf58de32baa0d7909c9700986);
+        
+    
+        var popup_9fa2b1fc4be7bb51ffca61034eff1916 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_70230c3cd2c6bbd6f5a08ba5b8df4337 = $(`<div id="html_70230c3cd2c6bbd6f5a08ba5b8df4337" style="width: 100.0%; height: 100.0%;">             <b>Type:</b> Banjir<br>             <b>Location:</b> Jakarta Utara<br>             <b>Date:</b> 23 February<br>             <b>Time:</b> Tidak ada dalam artikel<br>             <b>Impact:</b> nan.             <br><a href='https://www.cnnindonesia.com/nasional/20250223113816-20-1201449/rano-karno-kejar-keruk-1-juta-meter-kubik-lumpur-cegah-banjir-jakarta' target='_blank'>Baca Selengkapnya</a>             </div>`)[0];
+                popup_9fa2b1fc4be7bb51ffca61034eff1916.setContent(html_70230c3cd2c6bbd6f5a08ba5b8df4337);
+            
+        
+
+        marker_94c7cecdfcd3542d7be1c7a920c6c38f.bindPopup(popup_9fa2b1fc4be7bb51ffca61034eff1916)
+        ;
+
+        
+    
+    
+            var marker_5e322df68db98b41c3e7753ef63cb85b = L.marker(
+                [-6.136197, 106.90069022428446],
+                {
+}
+            ).addTo(marker_cluster_7fabcfb87b94abdb028ba4b22ac0544a);
+        
+    
+            var icon_4c1abf2d208219209775c84ebf4274a7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_5e322df68db98b41c3e7753ef63cb85b.setIcon(icon_4c1abf2d208219209775c84ebf4274a7);
+        
+    
+        var popup_ef593c16c3c1eb600ab55bee1b1c8b4b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_61daf255b5e2c8c32e86392e5cbc0f7f = $(`<div id="html_61daf255b5e2c8c32e86392e5cbc0f7f" style="width: 100.0%; height: 100.0%;">             <b>Type:</b> Banjir<br>             <b>Location:</b> Jakarta Utara<br>             <b>Date:</b> 23 February<br>             <b>Time:</b> Tidak ada dalam artikel<br>             <b>Impact:</b> nan.             <br><a href='https://www.cnnindonesia.com/nasional/20250223103020-20-1201434/rano-karno-pimpin-apel-pengerukan-sungai-serentak-di-waduk-pluit' target='_blank'>Baca Selengkapnya</a>             </div>`)[0];
+                popup_ef593c16c3c1eb600ab55bee1b1c8b4b.setContent(html_61daf255b5e2c8c32e86392e5cbc0f7f);
+            
+        
+
+        marker_5e322df68db98b41c3e7753ef63cb85b.bindPopup(popup_ef593c16c3c1eb600ab55bee1b1c8b4b)
+        ;
+
+        
+    
+    
+            var marker_a85c91f5cfa64650285cac084c3d5c27 = L.marker(
+                [-9.652179, 120.2636908],
+                {
+}
+            ).addTo(marker_cluster_7fabcfb87b94abdb028ba4b22ac0544a);
+        
+    
+            var icon_8861c3f5e879a0bd2f3c6a00691508ad = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_a85c91f5cfa64650285cac084c3d5c27.setIcon(icon_8861c3f5e879a0bd2f3c6a00691508ad);
+        
+    
+        var popup_f7380ec9b5bbe11cf4bf960e51280e80 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8470f1f32739414a39ce3139919b2988 = $(`<div id="html_8470f1f32739414a39ce3139919b2988" style="width: 100.0%; height: 100.0%;">             <b>Type:</b> Gempa Bumi<br>             <b>Location:</b> Waingapu, Sumba Timur, Ntt<br>             <b>Date:</b> 24 February<br>             <b>Time:</b> 02.21 WIB<br>             <b>Impact:</b> [Gambas:Twitter] Hingga saat ini belum diketahui dampak kerusakan yang ditimbulkan akibat gempa bumi tersebut.             <br><a href='https://www.cnnindonesia.com/nasional/20250224044407-20-1201594/gempa-magnitudo-53-guncang-waingapu-ntt-bajawa-labuan-bajo-bergetar' target='_blank'>Baca Selengkapnya</a>             </div>`)[0];
+                popup_f7380ec9b5bbe11cf4bf960e51280e80.setContent(html_8470f1f32739414a39ce3139919b2988);
+            
+        
+
+        marker_a85c91f5cfa64650285cac084c3d5c27.bindPopup(popup_f7380ec9b5bbe11cf4bf960e51280e80)
+        ;
+
+        
+    
+    
+            var marker_8cfdb828249098dfbd46ea988d709c4d = L.marker(
+                [-7.42574765, 107.59873836837875],
+                {
+}
+            ).addTo(marker_cluster_7fabcfb87b94abdb028ba4b22ac0544a);
+        
+    
+            var icon_aee14a4235100f3f8830b5bf99bce50c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_8cfdb828249098dfbd46ea988d709c4d.setIcon(icon_aee14a4235100f3f8830b5bf99bce50c);
+        
+    
+        var popup_12fa5fbd6d662868c3d0c8716e227645 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_89168e5e36abf7623a4d21ce9e634ed6 = $(`<div id="html_89168e5e36abf7623a4d21ce9e634ed6" style="width: 100.0%; height: 100.0%;">             <b>Type:</b> Tanah Longsor<br>             <b>Location:</b> Bungbulang, Garut<br>             <b>Date:</b> 23 February 2025<br>             <b>Time:</b> 18.30 WIB<br>             <b>Impact:</b> Hingga Minggu malam pukul 20.             <br><a href='https://www.detik.com/jabar/berita/d-7792142/longsor-terjang-bungbulang-garut-1-orang-tertimbun' target='_blank'>Baca Selengkapnya</a>             </div>`)[0];
+                popup_12fa5fbd6d662868c3d0c8716e227645.setContent(html_89168e5e36abf7623a4d21ce9e634ed6);
+            
+        
+
+        marker_8cfdb828249098dfbd46ea988d709c4d.bindPopup(popup_12fa5fbd6d662868c3d0c8716e227645)
+        ;
+
+        
+    
+    
+            var marker_4f6fec5960a4ecd681089c0bd1302a66 = L.marker(
+                [36.5748441, 139.2394179],
+                {
+}
+            ).addTo(marker_cluster_7fabcfb87b94abdb028ba4b22ac0544a);
+        
+    
+            var icon_377897c1856ef57e5b679be834cd3e4b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_4f6fec5960a4ecd681089c0bd1302a66.setIcon(icon_377897c1856ef57e5b679be834cd3e4b);
+        
+    
+        var popup_c1c5b5f1e63e856c57783e3a7d4c7c9c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_705510933c4167f53ead10a476843d6b = $(`<div id="html_705510933c4167f53ead10a476843d6b" style="width: 100.0%; height: 100.0%;">             <b>Type:</b> Gempa Bumi<br>             <b>Location:</b> Jepang<br>             <b>Date:</b> 07 September 2024<br>             <b>Time:</b> Tidak ada dalam artikel<br>             <b>Impact:</b> Kendati demikian, banyak orang meyakini kemunculan oarfish sebagai tanda bencana alam, seperti gempa.             <br><a href='http://www.kompas.com/tren/read/2025/02/20/203000665/mengapa-kemunculan-oarfish-sering-dikaitkan-dengan-adanya-bencana-' target='_blank'>Baca Selengkapnya</a>             </div>`)[0];
+                popup_c1c5b5f1e63e856c57783e3a7d4c7c9c.setContent(html_705510933c4167f53ead10a476843d6b);
+            
+        
+
+        marker_4f6fec5960a4ecd681089c0bd1302a66.bindPopup(popup_c1c5b5f1e63e856c57783e3a7d4c7c9c)
+        ;
+
+        
+    
+    
+            var marker_151014ee19268b9d2d8ba0c417039168 = L.marker(
+                [-6.2833322, 106.8448558],
+                {
+}
+            ).addTo(marker_cluster_7fabcfb87b94abdb028ba4b22ac0544a);
+        
+    
+            var icon_720026cb6ddf03cfc3f8e922461fedd6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_151014ee19268b9d2d8ba0c417039168.setIcon(icon_720026cb6ddf03cfc3f8e922461fedd6);
+        
+    
+        var popup_0c5c11b8fc023b10bb1148745af7b17c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_54166333fd337010a899a4d6176ecb27 = $(`<div id="html_54166333fd337010a899a4d6176ecb27" style="width: 100.0%; height: 100.0%;">             <b>Type:</b> Banjir<br>             <b>Location:</b> Pasar Minggu, Jakarta Selatan<br>             <b>Date:</b> 21 February 2025<br>             <b>Time:</b> Tidak ada dalam artikel<br>             <b>Impact:</b> nan.             <br><a href='http://megapolitan.kompas.com/read/2025/02/21/14511431/rano-karno-pertimbangkan-relokasi-warga-kali-krukut-ke-rusun' target='_blank'>Baca Selengkapnya</a>             </div>`)[0];
+                popup_0c5c11b8fc023b10bb1148745af7b17c.setContent(html_54166333fd337010a899a4d6176ecb27);
+            
+        
+
+        marker_151014ee19268b9d2d8ba0c417039168.bindPopup(popup_0c5c11b8fc023b10bb1148745af7b17c)
+        ;
+
+        
+    
+    
+            marker_cluster_7fabcfb87b94abdb028ba4b22ac0544a.addTo(map_46b79ce7c2e0bf8a0d2f7ebf97e8b7f4);
+        
+</script>
+</html>
